@@ -1,6 +1,8 @@
 ---
 import Container from "@/components/container.astro";
 import Divider from "@/components/divider.astro";
+import RssIcon from "./icons/rss-icon.astro";
+import { site } from "@/consts";
 ---
 
 <footer>
@@ -14,6 +16,7 @@ import Divider from "@/components/divider.astro";
 
     <div class="flex flex-wrap gap-1 items-center">
       <a href="https://dev.ansango.com" target="_blank"> dev.ansango </a>
+      <a href={site.url + "/rss.xml"} target="_blank"> <RssIcon /> </a>
     </div>
   </Container>
 </footer>
