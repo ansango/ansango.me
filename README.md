@@ -1,4 +1,4 @@
-# ansango.template.astro
+# ansango.me
 
 Welcome to the source code a blog template based in Astro, TypeScript, and TailwindCSS. The content is dynamically generated from another repository through a GitHub Action by another template [ansango/ansango.template.vault](https://github.com/ansango/ansango.template.vault) (you can use it!).
 
@@ -20,7 +20,7 @@ The project follows a typical Astro project structure with a few custom configur
 
 ## Content Generation
 
-The content for this website is not stored directly in this repository. Instead, it is generated from a separate repository ([ansango/ansango.template.vault](https://github.com/ansango/ansango.template.vault) ) using a GitHub Action. This allows for dynamic content updates without modifying the core website structure. Clone the template too.
+The content for this website is not stored directly in this repository. Instead, it is generated from a separate repository ([ansango/ansango.me.vault](https://github.com/ansango/ansango.me.vault) ) using a GitHub Action. This allows for dynamic content updates without modifying the core website structure. Clone the template too.
 
 ### How It Works
 
