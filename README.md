@@ -1,6 +1,6 @@
 # ansango.me
 
-Welcome to the source code a blog template based in Astro, TypeScript, and TailwindCSS. The content is dynamically generated from another repository through a GitHub Action by another template [ansango/ansango.template.vault](https://github.com/ansango/ansango.template.vault) (you can use it!).
+Welcome to the source code a blog template based in Astro, TypeScript, and TailwindCSS. The content is dynamically generated from another repository through a GitHub Action by another template [ansango/ansango.me.vault](https://github.com/ansango/ansango.me.vault) (you can use it!).
 
 ## Technologies Used
 
