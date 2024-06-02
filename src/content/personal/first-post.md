@@ -2,10 +2,7 @@
 title: Hola Astro
 description: Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud
 date: 02/11/2024
-tags:
-  [
-    Tutorial,
-  ]
+tags: [Tutorial, a]
 published: true
 ---
 
@@ -13,7 +10,7 @@ Aquí va el contenido del post, está escrito en Markdown.
 
 ## Este es un título de segundo nivel
 
-Puedes escribir texto normal, **negritas**, *cursivas*, [enlaces](https://www.google.com), y mucho más. También puedes agregar imágenes:
+Puedes escribir texto normal, **negritas**, _cursivas_, [enlaces](https://www.google.com), y mucho más. También puedes agregar imágenes:
 
 ![Texto alternativo](https://via.placeholder.com/250)
 
@@ -47,16 +44,12 @@ body {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body></body>
 </html>
 ```
-
 
 ##### Este es un título de quinto nivel
 
@@ -94,6 +87,3 @@ Esta es una cita:
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 Y aquí termina el post.
-
-
-

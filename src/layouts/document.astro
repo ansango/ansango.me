@@ -6,7 +6,7 @@ import { site } from "@/consts";
 
 interface Props {
   title?: string;
-  description: string;
+  description?: string | null;
 }
 
 const { title, description } = Astro.props;
@@ -14,12 +14,11 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang={site.lang} class="size-full">
-  <head>
-    <Head
-      title={title ? `${title} | ${site.name}` : site.name}
-      description={description}
-    />
-  </head>
+  <Head
+    title={title ? `${title} | ${site.name}` : site.name}
+    description={description ?? ""}
+  />
+
   <body
     class="size-full flex flex-col font-sans antialiased bg-background prose max-w-full dark:prose-invert"
   >
