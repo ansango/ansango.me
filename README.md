@@ -24,7 +24,7 @@ The content for this website is not stored directly in this repository. Instead,
 
 ### How It Works
 
-1. **Content Repository**: The content is managed in the [ansango/ansango.template.vault](https://github.com/ansango/ansango.template.vault) repository you can use tools like Obsidian to manage the content.
+1. **Content Repository**: The content is managed in the [ansango/ansango.me.vault](https://github.com/ansango/ansango.me.vault) repository you can use tools like Obsidian to manage the content.
 2. **GitHub Action**: A GitHub Action in the content repository is triggered on push events.
 3. **Deployment**: The action builds the content and deploys it to this website, ensuring that the latest content is always displayed.
 
