@@ -9,7 +9,7 @@ export const site: Site = {
   pages: {
     home: {
       description:
-        "Esta es mi blog personal, donde escribo sobre hábitos, música, viajes y desarrollo personal.",
+        "Este es mi blog personal, donde escribo sobre hábitos, música, viajes y desarrollo personal.",
       entriesPerPage: 15,
     },
     tags: {
