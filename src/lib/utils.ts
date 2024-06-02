@@ -28,6 +28,9 @@ export const slugify = (text: string): string => {
     .replace(/[^\w-]+/g, "");
 };
 
+export const unSlugify = (text: string): string =>
+  text.charAt(0).toUpperCase() + text.slice(1).replaceAll("-", " ");
+
 export const getPageNumbers = (
   numberOfPosts: number,
   entriesPerPage: number
@@ -61,8 +64,8 @@ export const getPagination = <T>({
   const currentPage = isIndex
     ? 1
     : page && !isNaN(Number(page)) && totalPagesArray.includes(Number(page))
-      ? Number(page)
-      : 0;
+    ? Number(page)
+    : 0;
 
   const lastEntry = isIndex ? entriesPerPage : currentPage * entriesPerPage;
   const startEntry = isIndex ? 0 : lastEntry - entriesPerPage;
@@ -74,4 +77,3 @@ export const getPagination = <T>({
     paginatedEntries,
   };
 };
-

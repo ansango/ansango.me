@@ -6,7 +6,7 @@ import markdown from "./src/lib/plugins/markdown";
 import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://me.ansango.com",
   integrations: [
     sitemap(),
     tailwind(),
