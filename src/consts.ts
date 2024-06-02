@@ -2,13 +2,14 @@ import type { Site } from "@/types";
 import { seoContentCollection } from "./content/config";
 
 export const site: Site = {
-  url: "https://dev.ansango.com",
-  name: "dev.ansango",
+  url: "https://me.ansango.com",
+  name: "me.ansango",
   email: "anibalsantosgo@gmail.com",
   lang: "es",
   pages: {
     home: {
-      description: "Esta es mi página de notas de tecnología.",
+      description:
+        "Esta es mi blog personal, donde escribo sobre hábitos, música, viajes y desarrollo personal.",
       entriesPerPage: 15,
     },
     tags: {

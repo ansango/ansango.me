@@ -3,7 +3,8 @@ import Container from "@/components/container.astro";
 import Divider from "@/components/divider.astro";
 import EntriesList from "@/components/entries-list.astro";
 import Entry from "@/components/entry.astro";
-import Searcher from "@/components/searcher.astro";
+import ExternalLink from "@/components/icons/external-link.astro";
+
 import { site } from "@/consts";
 import DocLayout from "@/layouts/document.astro";
 import {
@@ -21,12 +22,23 @@ const meta = site.pages.home;
 <DocLayout {...meta}>
   <Container>
     <div>
-      <h1>ansango</h1>
+      <h1>me·ansango</h1>
       <p>
-        Hola, soy <strong>Aníbal Sántos</strong>, aquí escribo sobre tecnología.
-        Encontrarás parte de mis wikis, apuntes, y algunos hacks. Espero que
-        encuentres algo útil por aquí.
+        <strong>Aníbal Santos</strong> al teclado, aquí no escribo sobre tecnología,
+        eso es en <a
+          href="https://dev.ansango.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center underline"
+          >dev.ansango.com <ExternalLink />
+        </a>.
       </p>
+      <p>
+        En este espacio escribo sobre música y libros, estilo de vida, algún que
+        otro viaje y puede que reflexiones personales. Si estás buscando mis
+        fotos, aún no tengo un lugar para ellas, pero todo llegará 🥲
+      </p>
+
       <div class="py-5">
         <section class="group">
           <h2>

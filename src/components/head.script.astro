@@ -2,22 +2,25 @@
   function init() {
     preloadTheme();
 
-    const lightThemeButton = document.getElementById("light-theme-button");
-    lightThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "light");
-      toggleTheme(false);
-    });
+    const toggleThemeButton = document.getElementById("toggle-theme-button");
+    toggleThemeButton?.addEventListener("click", () => {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
 
-    const darkThemeButton = document.getElementById("dark-theme-button");
-    darkThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "dark");
-      toggleTheme(true);
-    });
+      const userTheme = localStorage.theme ?? systemTheme;
 
-    const systemThemeButton = document.getElementById("system-theme-button");
-    systemThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "system");
-      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      if (userTheme === "light") {
+        localStorage.setItem("theme", "dark");
+        toggleTheme(true);
+      } else if (userTheme === "dark") {
+        localStorage.setItem("theme", "light");
+        toggleTheme(false);
+      } else {
+        toggleTheme(systemTheme === "dark");
+        localStorage.setItem("theme", systemTheme);
+      }
     });
 
     window
@@ -59,7 +62,6 @@
 
   function preloadTheme() {
     const userTheme = localStorage.theme;
-
     if (userTheme === "light" || userTheme === "dark") {
       toggleTheme(userTheme === "dark");
     } else {

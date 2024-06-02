@@ -1,0 +1,35 @@
+---
+import type { Item } from "@/lib/collections";
+import { unSlugify } from "@/lib/utils";
+interface Props extends Item {}
+
+const { children, name, type, slug, level } = Astro.props;
+---
+
+<li class="!p-0">
+  {
+    type === "file" && (
+      <a class="no-underline" href={slug}>
+        {unSlugify(name)}
+      </a>
+    )
+  }
+  {
+    type === "folder" && (
+      <details open>
+        <summary
+          class={`text-content-300 dark:text-primary pt-2 ${level < 1 ? "text-3xl" : "text-2xl"}`}
+        >
+          {unSlugify(name)}
+        </summary>
+        {children && children.length > 0 && (
+          <ul>
+            {children.map((child) => (
+              <Astro.self {...child} />
+            ))}
+          </ul>
+        )}
+      </details>
+    )
+  }
+</li>
